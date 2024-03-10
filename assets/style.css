@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+i {
+  font-size: 25px;
+}
+header {
+  grid-area: header;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+}
+h3 {
+  padding-left: 10px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.apartados {
+  display: none;
+}
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8 {
+  display: none;
+}
+.filter {
+  grid-area: filter;
+  background-color: rgb(160, 160, 160);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
+  padding-bottom: 10px;
+  align-items: center;
+}
+.filter h4 {
+  color: black;
+}
+select {
+  width: 200px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  background: #fff;
+  margin: 0 5px 5px 0;
+}
+
+footer {
+  grid-area: footer;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 200px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px;
+  padding-top: 20px;
+  border: 1px solid #b1afaf;
+}
+
+.card img {
+  width: 50%;
+}
+
+.card p {
+  padding-top: 15px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.card button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  margin-top: 7px;
+}
+
+.page_select button {
+  background-color: white;
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #b1afaf;
+}
+
+.pagina {
+  height: 100vh;
+  display: grid;
+  flex-direction: column;
+  grid-template-areas:
+    "header"
+    "filter"
+    "content"
+    "footer";
+  grid-template-rows: 10% 12% 65% 13%;
+}
+
+@media (min-width: 576px) {
+  .pagina {
+    height: 100vh;
+    grid-template-areas:
+      "header filter"
+      "header  content"
+      "footer content";
+    grid-template-columns: 2fr 13fr;
+    grid-template-rows: 10% 75% 15%;
+  }
+  .menu_desplegable {
+    display: none;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .apartados {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  ul {
+    list-style-type: none;
+  }
+  li {
+    margin-bottom: 30px;
+  }
+  .cards {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-y: scroll;
+  }
+  .card {
+    width: 200px;
+    height: 250px;
+  }
+  .card p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .card img {
+    width: 70%;
+  }
+  .card button {
+    padding: 10px 25px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    margin-top: 7px;
+  }
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6,
+  .card7,
+  .card8 {
+    display: flex;
+  }
+  .page_select button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
